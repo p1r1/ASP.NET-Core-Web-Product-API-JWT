@@ -1,0 +1,15 @@
+services:
+  auth-api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - Jwt__Secret=YourSuperSecretKeyHereAtLeast32CharactersLong123!
+      - Jwt__Issuer=Auth.API
+      - Jwt__Audience=Product.API
+      - Jwt__ExpiryInMinutes=60
+
+  product-api:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - Jwt__Secret=YourSuperSecretKeyHereAtLeast32CharactersLong123!
+      - Jwt__Issuer=Auth.API
+      - Jwt__Audience=Product.API

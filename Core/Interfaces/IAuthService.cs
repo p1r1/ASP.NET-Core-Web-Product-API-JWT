@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Core.Interfaces {
     public interface IAuthService {
-        Task<string> RegisterAsync(RegisterRequest request);
-        Task<string> LoginAsync(LoginRequest request);
+        Task<AuthResponse> RegisterAsync(RegisterRequest request);
+        Task<AuthResponse> LoginAsync(LoginRequest request);
     }
 }

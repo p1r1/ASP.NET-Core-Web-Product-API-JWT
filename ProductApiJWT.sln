@@ -4,14 +4,28 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Auth.API", "Auth.API\Auth.API.csproj", "{91B01F30-89AE-49E0-8D6E-B1CC37D71BD1}"
+	ProjectSection(ProjectDependencies) = postProject
+		{EC46C1D7-6162-4863-AD6A-AD293CB08351} = {EC46C1D7-6162-4863-AD6A-AD293CB08351}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Product.API", "Product.API\Product.API.csproj", "{5047CC43-C512-43C1-8002-EC1802D2BA0C}"
+	ProjectSection(ProjectDependencies) = postProject
+		{2FEEA042-5691-4A8E-9131-5F16AEE56CF3} = {2FEEA042-5691-4A8E-9131-5F16AEE56CF3}
+		{EC46C1D7-6162-4863-AD6A-AD293CB08351} = {EC46C1D7-6162-4863-AD6A-AD293CB08351}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{2FEEA042-5691-4A8E-9131-5F16AEE56CF3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{F2956F3D-84BF-4603-BE2E-A4B9A96FD3F4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure", "Infrastructure\Infrastructure.csproj", "{EC46C1D7-6162-4863-AD6A-AD293CB08351}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
+	ProjectSection(SolutionItems) = preProject
+		.dockerignore = .dockerignore
+		docker-compose.override.yml = docker-compose.override.yml
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -86,5 +100,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8F45EFC7-40BE-4714-AD47-C02863A08FF6}
 	EndGlobalSection
 EndGlobal

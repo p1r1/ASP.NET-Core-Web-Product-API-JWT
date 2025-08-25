@@ -1,0 +1,9 @@
+### Login and get token
+# @name auth
+POST http://localhost:7001/api/auth/register
+Content-Type: application/json
+
+{
+  "email":"a@b.com",
+  "password":"A.1234",
+}

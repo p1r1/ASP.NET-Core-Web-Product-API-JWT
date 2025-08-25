@@ -1,0 +1,10 @@
+### sign in
+POST http://localhost:7001/api/product
+Content-Type: application/json
+
+{
+  "name": "kalem",
+  "price": 10
+}
+
+Authorization: Bearer {{auth.response.body.$.token}}

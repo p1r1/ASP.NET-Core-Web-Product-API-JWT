@@ -1,6 +1,10 @@
-# Build aþamasý
+# Build
 FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 WORKDIR /src
+
+# EF Tool
+RUN dotnet tool install --global dotnet-ef --version 9.0.8
+ENV PATH="$PATH:/root/.dotnet/tools"
 
 # Copy project files
 COPY ["Product.API/Product.API.csproj", "Product.API/"]
@@ -14,11 +18,11 @@ COPY . .
 WORKDIR "/src/Product.API"
 RUN dotnet build "Product.API.csproj" -c Release -o /app/build
 
-# Publish aþamasý
+# Publish
 FROM build AS publish
 RUN dotnet publish "Product.API.csproj" -c Release -o /app/publish
 
-# Runtime aþamasý
+# Runtime
 FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS final
 WORKDIR /app
 COPY --from=publish /app/publish .

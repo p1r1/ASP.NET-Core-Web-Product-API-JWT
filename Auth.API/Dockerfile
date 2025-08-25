@@ -2,6 +2,10 @@
 FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 WORKDIR /src
 
+# EF Tool
+RUN dotnet tool install --global dotnet-ef --version 9.0.8
+ENV PATH="$PATH:/root/.dotnet/tools"
+
 # Copy project files
 COPY ["Auth.API/Auth.API.csproj", "Auth.API/"]
 COPY ["Core/Core.csproj", "Core/"]

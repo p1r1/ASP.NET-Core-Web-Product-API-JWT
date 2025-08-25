@@ -1,6 +1,6 @@
 ### Login and get token
 # @name auth
-POST https://localhost:7001/api/auth/login
+POST {{base_url}}:7001/api/auth/login
 Content-Type: application/json
 
 {
@@ -9,7 +9,7 @@ Content-Type: application/json
 }
 
 ### create product
-POST https://localhost:7002/api/products
+POST {{base_url}}:7002/api/products
 Content-Type: application/json
 Authorization: Bearer {{auth.response.body.$.token.token}}
 

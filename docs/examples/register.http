@@ -1,9 +1,9 @@
 ### register
-POST https://localhost:7001/api/auth/register
+POST {{base_url}}:7001/api/auth/register
 Content-Type: application/json
 
 {
-  "email": "a@b.com",
+  "email": "aa@b.com",
   "password": "Aa.1234",
   "confirmPassword": "Aa.1234",
   "firstName": "Test One",

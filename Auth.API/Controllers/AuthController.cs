@@ -2,6 +2,7 @@
 using Core.DTOs;
 using Core.Interfaces;
 using Microsoft.AspNetCore.Mvc;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Auth.API.Controllers {
     [ApiController]
@@ -23,7 +24,7 @@ namespace Auth.API.Controllers {
                 return BadRequest(new { Error = ex.Message });
             }
             catch (Exception ex) {
-                return StatusCode(500, new { Error = "An error occurred during registration." });
+                return StatusCode(500, new { Error = ex.Message });
             }
         }
 

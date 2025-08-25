@@ -85,8 +85,8 @@ select * from "AspNetUsers";
 ```
 
 ## Swagger Docs
--Auth API Swagger: http://localhost:7001/swagger
--Product API Swagger: http://localhost:7002/swagger
+- Auth API Swagger: http://localhost:7001/swagger
+- Product API Swagger: http://localhost:7002/swagger
 
 ## 📊 API Endpoints
 1. Authentication Endpoints

@@ -10,21 +10,21 @@ Auth.API - JWT Authentication & User Management
 Product.API - Product CRUD Operations with Redis Caching
 
 ## 🛠️ Technologies Used
--.NET 9.0 - Latest .NET Framework
--ASP.NET Core Web API - RESTful API Framework
--Entity Framework Core 9 - ORM with PostgreSQL
--JWT Bearer Authentication - Secure Token-based Auth
--Redis - In-memory Data Caching
--Docker & Docker Compose - Containerization
--PostgreSQL - Relational Database
--MediatR - CQRS Pattern Implementation
+- .NET 9.0 - Latest .NET Framework
+- ASP.NET Core Web API - RESTful API Framework
+- Entity Framework Core 9 - ORM with PostgreSQL
+- JWT Bearer Authentication - Secure Token-based Auth
+- Redis - In-memory Data Caching
+- Docker & Docker Compose - Containerization
+- PostgreSQL - Relational Database
+- MediatR - CQRS Pattern Implementation
 
 ## 🚀 Quick Start
 ### Prerequisites
-*.NET 9.0 SDK
-*Docker Desktop
-*PostgreSQL (optional, Docker version provided)
-*Redis (optional, Docker version provided)
+- .NET 9.0 SDK
+- Docker Desktop
+- PostgreSQL (optional, Docker version provided)
+- Redis (optional, Docker version provided)
 
 ### Installation & Running
 Postgres Default Credentials: Username=postgres;Password=postgres
@@ -84,25 +84,18 @@ select * from "Products";
 select * from "AspNetUsers";
 ```
 
-//code
--build
-docker-compose build --no-cache
--run
-docker-compose up -d
-
-
 ## Swagger Docs
 -Auth API Swagger: http://localhost:7001/swagger
 -Product API Swagger: http://localhost:7002/swagger
 
 ## 📊 API Endpoints
-1.Authentication Endpoints
--POST	"/api/auth/register"	Register new user
--POST	"/api/auth/login"	    Login and get JWT token
+1. Authentication Endpoints
+- POST	"/api/auth/register"	Register new user
+- POST	"/api/auth/login"	    Login and get JWT token
 
-2.Product Endpoints (Require JWT)
--GET	/api/products
--POST	/api/products
+2. Product Endpoints (Require JWT)
+- GET	/api/products
+- POST	/api/products
 
 You can find example ".http" files inside docs/examples.
 
@@ -110,7 +103,7 @@ You can find example ".http" files inside docs/examples.
 - Register a new user with email and password
 - Login to receive JWT token
 - Include token in Authorization header: Bearer {token}
--Access protected endpoints with valid token
+- Access protected endpoints with valid token
 
 ## ⚙️ Configuration
 Environment Variables
@@ -135,8 +128,8 @@ Product.API: (Similar structure)
 Similar settings inside "docker-compose.override.yml"
 
 Docker Compose Services
--postgres: PostgreSQL 16 database
--redis: Redis 7 caching server
--auth-api: Authentication service (port 7001)
--product-api: Product service (port 7002)
--ef-tools: EF Core tools for migrations
+- postgres: PostgreSQL 16 database
+- redis: Redis 7 caching server
+- auth-api: Authentication service (port 7001)
+- product-api: Product service (port 7002)
+- ef-tools: EF Core tools for migrations

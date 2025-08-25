@@ -1,10 +1,19 @@
-### sign in
-POST http://localhost:7001/api/product
+### Login and get token
+# @name auth
+POST https://localhost:7001/api/auth/login
 Content-Type: application/json
+
+{
+  "email":"a@b.com",
+  "password":"Aa.1234"
+}
+
+### create product
+POST https://localhost:7002/api/products
+Content-Type: application/json
+Authorization: Bearer {{auth.response.body.$.token.token}}
 
 {
   "name": "kalem",
   "price": 10
 }
-
-Authorization: Bearer {{auth.response.body.$.token}}

@@ -12,7 +12,7 @@ namespace Auth.API.Services {
         private readonly UserManager<User> _userManager;
         private readonly IConfiguration _configuration;
 
-        public AuthService(UserManager<User>userManager, IConfiguration configuration) {
+        public AuthService(UserManager<User> userManager, IConfiguration configuration) {
             _userManager = userManager;
             _configuration = configuration;            
         }
@@ -32,7 +32,7 @@ namespace Auth.API.Services {
                 LastName = request.LastName
             };
 
-            var res = await _userManager.CreateAsync(user);
+            var res = await _userManager.CreateAsync(user, request.Password);
             if (!res.Succeeded) { 
                 var err = string.Join(", ", res.Errors.Select(e=> e.Description));
                 throw new ArgumentException($"User creation failed!: {err}");

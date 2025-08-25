@@ -27,14 +27,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		docker-compose.yml = docker-compose.yml
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "examples", "examples", "{20112D04-C5F3-4001-9EBC-9429FC4599BC}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "examples", "examples", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 	ProjectSection(SolutionItems) = preProject
-		login.http = login.http
-		get_products.http = get_products.http
-		set_product.http = set_product.http
-		register.http = register.http
+		docs\examples\get_products.http = docs\examples\get_products.http
+		docs\examples\http-client.env.json = docs\examples\http-client.env.json
+		docs\examples\login.http = docs\examples\login.http
+		docs\examples\register.http = docs\examples\register.http
+		docs\examples\set_product.http = docs\examples\set_product.http
 	EndProjectSection
 EndProject
 Global
@@ -113,7 +112,6 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{02EA681E-C7D8-13C7-8484-4AC65E1B71E8} = {8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}
-		{20112D04-C5F3-4001-9EBC-9429FC4599BC} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8F45EFC7-40BE-4714-AD47-C02863A08FF6}

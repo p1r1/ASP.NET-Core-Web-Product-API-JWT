@@ -1,11 +1,11 @@
-### sign in
-POST http://localhost:7001/api/auth/register
+### register
+POST https://localhost:7001/api/auth/register
 Content-Type: application/json
 
 {
   "email": "a@b.com",
-  "password": "A.1234",
-  "confirmPassword": "A.1234",
+  "password": "Aa.1234",
+  "confirmPassword": "Aa.1234",
   "firstName": "Test One",
   "lastName": "User"
 }

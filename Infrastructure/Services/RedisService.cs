@@ -23,6 +23,7 @@ namespace Infrastructure.Services {
             await _redisDB.StringSetAsync(key, JsonSerializer.Serialize(value), expiry);
         }
 
+        // important note here redis on docker in windows use this docker run -d -p 6379:6379 redis for testing
         public async Task RemoveAsync(string key) => await _redisDB.KeyDeleteAsync(key);
 
         public async Task RemoveByPatternAsync(string pattern) {

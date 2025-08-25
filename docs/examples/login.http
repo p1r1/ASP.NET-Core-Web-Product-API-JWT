@@ -1,9 +1,13 @@
 ### Login and get token
 # @name auth
-POST http://localhost:7001/api/auth/register
+POST https://localhost:7001/api/auth/login
 Content-Type: application/json
 
 {
   "email":"a@b.com",
-  "password":"A.1234",
+  "password":"Aa.1234"
 }
+
+### save_token
+@response = JSON.parse(responseBody).token.token;
+client.global.set("TOKEN", response.token.token);

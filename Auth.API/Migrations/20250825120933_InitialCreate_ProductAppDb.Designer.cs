@@ -9,11 +9,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
 
-namespace Product.API.Data.Migrations
+namespace Auth.API.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250824162712_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20250825120933_InitialCreate_ProductAppDb")]
+    partial class InitialCreate_ProductAppDb
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -49,7 +49,7 @@ namespace Product.API.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Products");
+                    b.ToTable("Products", (string)null);
                 });
 
             modelBuilder.Entity("Core.Entities.User", b =>

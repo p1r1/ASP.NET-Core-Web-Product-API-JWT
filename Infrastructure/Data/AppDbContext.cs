@@ -12,6 +12,7 @@ namespace Infrastructure.Data {
             base.OnModelCreating(builder);
 
             builder.Entity<Product>(entity => {
+                entity.ToTable("Products");  // Default: "Products"
                 entity.HasKey(p => p.Id);
                 entity.Property(p => p.Name).IsRequired().HasMaxLength(100);
                 entity.Property(p => p.Price).HasColumnType("decimal(18,2)");
